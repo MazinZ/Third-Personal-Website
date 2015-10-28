@@ -38,13 +38,13 @@
 		<g>
 			<g enable-background="new    ">
 				<g>
-					<polygon class='animate' fill="#C8B211" points="607.9,508.7 607.8,541.4 577.6,545.7 577.6,513 					"/>
+					<polygon class='animate delay' fill="#C8B211" points="607.9,508.7 607.8,541.4 577.6,545.7 577.6,513 					"/>
 				</g>
 				<g>
-					<polygon class='animate' fill="#75680A" points="577.6,545.7 557.1,534.5 557.1,501.8 577.6,513 					"/>
+					<polygon class='animate delay' fill="#75680A" points="577.6,545.7 557.1,534.5 557.1,501.8 577.6,513 					"/>
 				</g>
 				<g>
-					<polygon class='animate' fill="#A2900D" points="577.6,513 557.1,501.8 587.4,497.6 607.9,508.7 					"/>
+					<polygon class='animate delay' fill="#A2900D" points="577.6,513 557.1,501.8 587.4,497.6 607.9,508.7 					"/>
 				</g>
 			</g>
 		</g>
