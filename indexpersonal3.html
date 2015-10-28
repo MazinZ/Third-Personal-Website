@@ -7,11 +7,84 @@
 <style>
 html,body {
 	background-color:#152c44;	
+	height:100%;
+
 	
 }
+#splash {
+	width:54%;
+	height:60%;
+	background:url("./splashlayer0.svg");
+	margin-left:auto;
+	margin-right:auto;
+	background-repeat:no-repeat;
+	position:relative;
+
+}
+
+#layer1 {
+	width:100%;
+	height:100%;
+	background:url("./splashlayer1.svg");	
+	background-repeat:no-repeat;
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#layer2 {
+	width:100%;
+	height:100%;
+	background:url("./splashlayer2.svg");	
+	background-repeat:no-repeat;
+	z-index:2;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#layer3 {
+	width:100%;
+	height:100%;
+	background:url("./splashlayer3.svg");	
+	background-repeat:no-repeat;
+	z-index:3;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
 </style>
 </head>
 
 <body>
+<div id="main">
+<div id="splash">
+	 <div id="layer1">
+       
+     </div> 
+ 	 <div id="layer2">
+       
+     </div> 
+     <div id="layer3">
+     
+     </div> 
+</div>
+</div>
+
+
+  <div id="test" style="z-index:10; height:100px;width:100px;background-color:#000;"> asdfsdafasdf</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+ /*var animationDiv = $('#test');
+   function run() {
+       animationDiv.animate({marginTop:'+=20'}, 2000);
+       animationDiv.animate({marginTop:'-=20'}, 2000, run);
+   }
+
+   runIt();*/
+</script>
 </body>
 </html>
