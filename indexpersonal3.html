@@ -1,6 +1,5 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
@@ -79,7 +78,7 @@ html,body {
 	margin-bottom:20px;
 
 }
-#main {
+#mainid {
 	width:100%;
 	height:100%;	
 	position:fixed;
@@ -88,7 +87,7 @@ html,body {
 	z-index:-99;
 }
 
-#about {
+#aboutid {
 	background-color:#c4b02d;
 	width:100%;
 	height:100%;
@@ -97,7 +96,7 @@ html,body {
 }
 
 
-#contact {
+#contactid {
 	background-color:#141e3a;
 	width:100%;
 	height:100%;
@@ -369,12 +368,76 @@ nav ul li a:hover {
 }
 /*             */
 
+#arrow {
+	width:52px;
+	height:26px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	
+}
+
+/*    animation          */
+
+
+.animated { 
+    -webkit-animation-duration: .5s; 
+    animation-duration: .5s; 
+    -webkit-animation-fill-mode: forwards; 
+    animation-fill-mode: forwards; 
+    -webkit-animation-timing-function: ease-in; 
+    animation-timing-function: ease-in; 
+	
+} 
+
+.fadeInUp { 
+    -webkit-animation-name: fadeInUp; 
+    animation-name: fadeInUp; 
+}
+
+@-webkit-keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(10px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.wDelay {
+	animation-delay:.4s;	
+	
+}
+/*          */
+
+#nameHeader {
+	  opacity: 0;
+
+}
+
+#aboutHeader {
+	  opacity: 0;
+
+}
 </style>
 </head>
 
 <body>
 <div id="menuIconOverlay">
-<a href="#navi" class="navi-trigger">
+<a href="#navi" class="navi-trigger" id="navi-trigger">
 		<span class="navi-icon" >
 			<svg viewBox="0 0 800 600">
     			<path class="hicon" d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
@@ -385,7 +448,7 @@ nav ul li a:hover {
 	</a>
 </div>
 
-<div id="main">
+<div id="mainid">
 
 
 
@@ -404,11 +467,15 @@ nav ul li a:hover {
      
      </div> 
 </div>
-</div>
-<div id = "about">
-<h1 style="position:relative; margin-left:53px; "> <br>Hi, I'm Mazin Zakaria, </h1>
 
-<h2 style="margin-left:53px;"> iunoiiun oinoinua iunoi iunoinoinuaiu noiiunoinoinua iunoiiunoinoinuaiunoiiunoinoinuaiu noiiuno inoinua iunoi iunoinoinua </h2>
+<!--<div id="arrow" ><object data="./arrowicon.svg" type="image/svg+xml"></object></div>-->
+
+</div>
+<div id = "aboutid">
+<h1 id="nameHeader" style="position:relative; margin-left:53px;" class=""> <br>Hi, I'm Mazin Zakaria, </h1>
+
+<h2 id="aboutHeader" style="margin-left:53px;" class=""> a 20 year old software developer, graphic designer and student of computer science at the University of Kentucky.</h2>
+ 
  
 
 <div class="overlay">
@@ -417,10 +484,9 @@ nav ul li a:hover {
 			
 			<li>
 			<ul>
-				<li style="margin-bottom:40px;"><a href="#">H O M E</a></li>
-                
-				<li style="margin-bottom:40px;"><a target="_blank" href="#">A B O U T</a></li>
-				<li ><a target="_blank" href="#">C O N T A C T</a></li>
+				<li id="main" style="margin-bottom:40px;"><a href="#main">H O M E</a></li>
+				<li id="about" style="margin-bottom:40px;"><a href="#about">A B O U T</a></li>
+				<li id="contact"><a href="#contact">C O N T A C T</a></li>
 	
 			</ul>
 			</li>
@@ -455,7 +521,7 @@ nav ul li a:hover {
 
 </div>
 
-<div id="contact">
+<div id="contactid">
 	<div id="contactWrapper"> 
     
     <div id="contactCard" ><p style="margin-top:60px; position:relative;">
@@ -497,9 +563,9 @@ nav ul li a:hover {
 	(function() {
 	var i, resize;
 
-  	$("a").click(function() {
+  	$("#navi-trigger").click(function() {
     clearInterval(i);
-    return $("a").toggleClass("cross");
+    return $("#navi-trigger").toggleClass("cross");
   	});
 
   	resize = function() {
@@ -515,26 +581,39 @@ nav ul li a:hover {
 }).call(this)
 
 $(document).ready(function(){
-    $("a").click(function(){
+    $("#navi-trigger").click(function(){
         $(".overlay").fadeToggle(200);
-       $(this).toggleClass('btn-open').toggleClass('btn-close');
 	   
     });
 });
 $('.overlay').on('click', function(){
     $(".overlay").fadeToggle(200);  
-	$("a").toggleClass("cross"); 
-	
+	$("#navi-trigger").toggleClass("cross"); 
     open = false;
 });
 
- /*var animationDiv = $('#test');
-   function run() {
-       animationDiv.animate({marginTop:'+=20'}, 2000);
-       animationDiv.animate({marginTop:'-=20'}, 2000, run);
-   }
+$(".wrap-nav li").click(function(e) {
+	e.preventDefault();
+		var idName = "#" + $(this).attr('id')  + "id";
+					console.log(idName);
 
-   runIt();*/
+			$('html, body').animate({
+				scrollTop: $(idName).offset().top
+			}, 1000);
+			
+		
+});
+  $(window).scroll(function() {
+
+if ($(window).scrollTop() > $("#nameHeader").offset().top-300)  {
+    $("#nameHeader").addClass("animated").addClass("fadeInUp");
+	
+	}
+if ($(window).scrollTop() > $("#nameHeader").offset().top-300 )  {
+	$("#aboutHeader").addClass("animated").addClass("fadeInUp").addClass("wDelay");	
+	}
+
+  });
 </script>
 </body>
 </html>
