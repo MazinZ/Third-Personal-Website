@@ -6,6 +6,8 @@
 	 <style>
 	 .animate {  
 	 animation: move 3s ease infinite;
+	 -webkit-animation: move 3s ease infinite;
+
 	}
 	
 	

@@ -1,10 +1,16 @@
 <!doctype html>
 <html>
 <head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <title>Mazin Zakaria</title>
 
 <style>
+a {
+    text-decoration: none;
+	
+}
 html,body {
 	background-color:#152c44;	
 	height:100%;
@@ -89,6 +95,7 @@ html,body {
 	height:100%;
 	z-index:11;
 	position:absolute;
+	margin-top:100%;
 }
 
 h1 {
@@ -97,6 +104,14 @@ h1 {
 	font-weight:700;
 	font-size:70px;
 }
+
+h2 {
+	color:#152c44;
+	font-family:Montserrat;
+	font-weight:700;
+	font-size:58px;
+}
+
 
 svg {
   width: 150px;
@@ -151,6 +166,174 @@ path#bottom {
 	left:0;
 }
 
+/* NAVIGATION */
+ul {
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+}
+li {
+	padding:0;
+	margin:0;
+}
+nav {
+	text-align:center;
+	width:100%;
+	position:relative;
+	height:auto;
+	overflow:hidden;
+	background:none;
+}
+nav ul {
+	text-align:center;
+}
+nav ul li {
+	display:inline-block;
+}
+nav ul li a {
+	color:#333;
+	display:inline-block;
+	padding:1em 3em;
+	text-decoration:none;
+	border-bottom:2px solid #fff;
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+	font-size:16px;
+}
+nav ul li a:hover {
+	color: #1e3d54;
+}
+/*styling open close button*/
+
+/*overlay*/
+.overlay {
+	display:none;
+	position:fixed;
+	top:0;
+	height:100%;
+	width:100%;
+    background-color: rgba(2, 23, 37, 0.7);
+	overflow:auto;
+	font-family:"Montserrat";
+	z-index:99;
+	font-size:
+}
+.wrap {
+	color:#e9e9e9;
+	text-align:center;
+	max-width:90%;
+	margin:0 auto;
+}
+.wrap ul.wrap-nav {
+	text-transform:capitalize;
+	padding:150px 0px 100px;
+}
+.wrap ul.wrap-nav li {
+	font-size:0px;
+	display:inline-block;
+	vertical-align:top;
+	width:24%;
+	position:relative;
+}
+.wrap ul.wrap-nav li a {
+	color:#1e3d54;
+	display:block;
+	padding:8px 0;
+	text-decoration:none;
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.wrap ul.wrap-nav li a:hover {
+	color:#f0f0f0;
+}
+.wrap ul.wrap-nav ul {
+	padding:20px 0;
+}
+.wrap ul.wrap-nav ul li {
+	display:block;
+	font-size:30px;
+	width:100%;
+	color:#e9e9e9;
+}
+.wrap ul.wrap-nav ul li a {
+	color:#f0f0f0;
+}
+.wrap ul.wrap-nav ul li a:hover {
+	color:#1e3d54;
+}
+.social {
+	font-size:25px;
+	padding:20px;
+}
+.social p {
+	margin:0;
+	padding:20px 0 5px 0;
+	line-height:30px;
+	font-size:13px;
+}
+.social p a {
+	text-decoration:none;
+	margin:0;
+	padding:0;
+}
+.social-icon {
+	width:80px;
+	height:50px;
+	color:#fff;
+	display:inline-block;
+	margin:0 20px;
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.social-icon:hover {
+	background:#1e3d54;
+	color:#f0f0f0;
+}
+.social-icon i {
+	margin-top:12px;
+}
+@media screen and (max-width:48em) {
+	.wrap ul.wrap-nav>li {
+		width:100%;
+		padding:20px 0;
+	}
+	.wrap ul.wrap-nav {
+		padding:30px 0px 0px;
+	}
+	nav ul {
+		opacity:0;
+		visibility:hidden;
+	}
+	.social {
+		color:#c1c1c1;
+		font-size:25px;
+		padding:15px 0;
+	}
+	.social-icon {
+		width:100%;
+		height:50px;
+		background:#fff;
+		color:#333;
+		display:block;
+		margin:5px 0;
+	}
+}
+.content {
+	width:100%;
+	margin-top:200px;
+	font-size:20px;
+	color#333;
+	text-align: center;
+}
+/*             */
+
 </style>
 </head>
 
@@ -190,8 +373,51 @@ path#bottom {
 <div id = "about">
 <h1 style="margin-left:53px; margin-top:80px;"> Hi, I'm Mazin Zakaria, </h1>
 
+<h2 style="margin-left:53px;"> iunoiiunoinoinua </h2>
+
+
+<div class="overlay">
+	<div class="wrap">
+		<ul class="wrap-nav">
+			
+			<li>
+			<ul>
+				<li style="margin-bottom:40px;"><a href="#">H O M E</a></li>
+                
+				<li style="margin-bottom:40px;"><a target="_blank" href="#">A B O U T</a></li>
+				<li ><a target="_blank" href="#">C O N T A C T</a></li>
+	
+			</ul>
+			</li>
+			
+		</ul>
+		<div class="social">
+			<a target="_blank" href="https://github.com/MazinZ/">
+			<div class="social-icon">
+				<i class="fa fa-github"></i>
+			</div>
+			</a>
+			<a target="_blank" href="https://behance.net/mazinzakaria/">
+			<div class="social-icon">
+				<i class="fa fa-behance"></i>
+			</div>
+			</a>
+			<a target="_blank" href="https://www.linkedin.com/in/mazinzakaria">
+			<div class="social-icon">
+				<i class="fa fa-linkedin"></i>
+			</div>
+			</a>
+			
+			<p style="font-weight:200;">
+				502.468.3855<br>
+				 mazin.zakaria@uky.edu</a>
+			</p>
+		</div>
+	</div>
 </div>
 
+
+</div>
 
 
 
@@ -212,10 +438,24 @@ path#bottom {
   	};
 
   	$(window).resize(resize);
-
+		
 	resize();
 
 }).call(this)
+
+$(document).ready(function(){
+    $("a").click(function(){
+        $(".overlay").fadeToggle(200);
+       $(this).toggleClass('btn-open').toggleClass('btn-close');
+	   
+    });
+});
+$('.overlay').on('click', function(){
+    $(".overlay").fadeToggle(200);  
+	$("a").toggleClass("cross"); 
+	
+    open = false;
+});
 
  /*var animationDiv = $('#test');
    function run() {
