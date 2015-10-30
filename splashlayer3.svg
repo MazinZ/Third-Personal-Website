@@ -24,7 +24,23 @@
   	}
 }
 
+
+@-webkit-keyframes move {
+  50% {
+     transform: translate(0px, 20px);
+  	}
+}
+
+@-webkit-keyframes move2 {
+  50% {
+     transform: translate(0px, 20px);
+  	}
+}
+
+
 .delay {
+	-webkit-animation-delay:.5s;
+
 	animation-delay:.5s;
 }
 	 </style>

@@ -10,7 +10,7 @@
   animation: outline 8s linear forwards;
   stroke-width:.5px;
   stroke:#fff;
-  animation-delay:1s;
+  animation-delay:.3s;
 
 }
 
@@ -19,7 +19,7 @@
      stroke-dashoffset: 60;
   -webkit-animation: fill 3s linear forwards;
   animation: fill 3s linear forwards;
-  animation-delay:3s;
+  animation-delay:2.3s;
 	stroke-linejoin:round; 
 	  stroke:#fff;
 
@@ -56,27 +56,30 @@
 }
 
 .Mfill{
+	-webkit-animation-delay:0s;
 	animation-delay:0s;
 
 
 }
 .Afill{
+		-webkit-animation-delay:.2s;
 		animation-delay:.2s;
 
 	
 }
 .Zfill{
-	
+	-webkit-animation-delay:.4s;
 	animation-delay:.4s;
 
 }
 .Ifill{
+	-webkit-animation-delay:.6s;
 	animation-delay:.6s;
 
 	
 }
 .Nfill{
-	
+	-webkit-animation-delay:.8s;
 	animation-delay:.8s;
 
 }
@@ -85,22 +88,24 @@
 	
 }
 .Aoutline{
+		-webkit-animation-delay:.2s;
 		animation-delay:.2s;
 
 	
 }
 .Zoutline{
-	
+	-webkit-animation-delay:.4s;
 	animation-delay:.4s;
 
 }
 .Ioutline{
+	-webkit-animation-delay:.6s;
 	animation-delay:.6s;
 
 	
 }
 .Noutline{
-	
+	-webkit-animation-delay:.8s;
 	animation-delay:.8s;
 
 }
