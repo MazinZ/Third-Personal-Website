@@ -10,6 +10,7 @@
   animation: outline 8s linear forwards;
   stroke-width:.5px;
   stroke:#fff;
+  animation-delay:1s;
 
 }
 
@@ -18,7 +19,7 @@
      stroke-dashoffset: 60;
   -webkit-animation: fill 3s linear forwards;
   animation: fill 3s linear forwards;
-  animation-delay:2s;
+  animation-delay:3s;
 	stroke-linejoin:round; 
 	  stroke:#fff;
 

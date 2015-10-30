@@ -2,6 +2,8 @@
 <html><head>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta charset="UTF-8">
 <title>Mazin Zakaria</title>
 
@@ -19,54 +21,71 @@ a {
 	
 }
 html,body {
-	background-color:#152c44;	
 	height:100%;
 	margin:0;
+	overflow:hidden;
 
 	
 }
+body {
+	background-color:#152c44;	
+	
+}
 #splash {
-	width:54%;
-	height:60%;
-	background:url("./splashlayer0.svg");
+	width:47%;
+	height:55%;
 	margin-left:auto;
 	margin-right:auto;
 	background-repeat:no-repeat;
 	position:relative;
+	padding-right:30px;
+
+}
+
+#layer0 {
+	width:100%;
+	height:100%;
+	z-index:1;
+	position:absolute;
+	bottom:0;
+	left:0;
+	
 
 }
 
 #layer1 {
 	width:100%;
 	height:100%;
-	background:url("./splashlayer1.svg");	
+	/*background:url("./splashlayer1.svg");	*/
 	background-repeat:no-repeat;
 	z-index:1;
 	position:absolute;
-	top:0;
+	bottom:0;
 	left:0;
+
 }
 
 #layer2 {
 	width:100%;
 	height:100%;
-	background:url("./splashlayer2.svg");	
+	/*background:url("./splashlayer2.svg");	*/
 	background-repeat:no-repeat;
 	z-index:2;
 	position:absolute;
-	top:0;
+	bottom:0;
 	left:0;
 }
 
 #layer3 {
 	width:100%;
 	height:100%;
-	background:url("./splashlayer3.svg");	
+	/*background:url("./splashlayer3.svg");	*/
 	background-repeat:no-repeat;
 	z-index:3;
 	position:absolute;
-	top:0;
+	bottom:0;
 	left:0;
+
 }
 
 #header{
@@ -377,7 +396,7 @@ nav ul li a:hover {
 	
 }
 
-/*    animation          */
+/*    text animation    */
 
 
 .animated { 
@@ -432,6 +451,54 @@ nav ul li a:hover {
 	  opacity: 0;
 
 }
+#loadingOverlay {
+	width:100%;
+	height:100%;
+	z-index:9999;
+	background-color:#1b2d43;
+}
+
+#loaderContainer {
+	width:80px;
+	height:80px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+	margin-top: -40px;
+}
+
+/*      loading animation            */
+
+/*.loading { 
+    animation: fade 1s linear forwards;
+	-webkit-animation: fade 1s linear forwards;
+} 
+
+@-webkit-keyframes fade { 
+    0% { 
+        opacity: 1; 
+    } 
+    100% { 
+        opacity: 0; 
+    } 
+} 
+
+@keyframes fade { 
+    0% { 
+        opacity: 1; 
+    } 
+    100% { 
+        opacity: 0; 
+    } 
+} 
+
+*/
+
+
+
+
+/*                              */
 </style>
 </head>
 
@@ -447,6 +514,9 @@ nav ul li a:hover {
 		</span>
 	</a>
 </div>
+<div id="loadingOverlay">
+	<div id="loaderContainer"> <object data="./puff.svg" type="image/svg+xml"></object></div>
+</div>
 
 <div id="mainid">
 
@@ -457,14 +527,20 @@ nav ul li a:hover {
 </div> 
         
 <div id="splash">
+		<div id="layer0">
+       <object data="./splashlayer0.svg" type="image/svg+xml"></object>
+		</div>
 	 <div id="layer1">
-       
+       <object data="./splashlayer1.svg" type="image/svg+xml"></object>
+
      </div> 
  	 <div id="layer2">
-       
+     <object data="./splashlayer2.svg" type="image/svg+xml"></object>
+  
      </div> 
      <div id="layer3">
-     
+     <object data="./splashlayer3.svg" type="image/svg+xml"></object>
+
      </div> 
 </div>
 
@@ -614,6 +690,14 @@ if ($(window).scrollTop() > $("#nameHeader").offset().top-300 )  {
 	}
 
   });
+  window.onload = function () { 
+  var load = setTimeout(function() {
+
+  	   $('html, body').css({ 'overflow': 'visible' })
+	 $("#loadingOverlay").fadeOut(500);
+	}, 150);
+  }	
+
 </script>
 </body>
 </html>
