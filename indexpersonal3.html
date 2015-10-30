@@ -133,6 +133,7 @@ h1 {
 	font-family:Montserrat;
 	font-weight:700;
 	font-size:70px;
+	margin-left:110px;
 }
 
 h2 {
@@ -140,6 +141,8 @@ h2 {
 	font-family:Montserrat;
 	font-weight:700;
 	font-size:58px;
+	margin-left:110px;
+
 }
 
 h3 {
@@ -147,6 +150,8 @@ h3 {
 	font-family:Montserrat;
 	font-weight:700;
 	font-size:36px;
+	margin-left:110px;
+
 }
 
 h3 a {	
@@ -368,8 +373,7 @@ nav ul li a:hover {
 	.social-icon {
 		width:100%;
 		height:50px;
-		background:#fff;
-		color:#333;
+		color:#fff;
 		display:block;
 		margin:5px 0;
 	}
@@ -503,37 +507,44 @@ opacity:0;
 strong {
  text-decoration: line-through; 	
 }
-/*      loading animation            */
-
-/*.loading { 
-    animation: fade 1s linear forwards;
-	-webkit-animation: fade 1s linear forwards;
-} 
-
-@-webkit-keyframes fade { 
-    0% { 
-        opacity: 1; 
-    } 
-    100% { 
-        opacity: 0; 
-    } 
-} 
-
-@keyframes fade { 
-    0% { 
-        opacity: 1; 
-    } 
-    100% { 
-        opacity: 0; 
-    } 
-} 
-
-*/
 
 
 
+@media screen and (max-width:1040px) {
+	h1 { font-size: 64px; }
+	h2 { font-size: 44px; }
+	h3 { font-size: 28px; }
+	
+	
+}
 
-/*                              */
+@media screen and (max-width:784px) {
+	h1 { font-size: 50px; }
+	h2 { font-size: 34px; }
+	h3 { font-size: 22px; }
+	svg {
+		width:80px;
+		height:120px;
+		top:13px;
+		left:-10px;
+	}
+	
+	
+}
+
+@media screen and (max-width:446px) {
+	h1 { font-size: 44px; margin-left:30px;}
+	h2 { font-size: 28px; margin-left:30px;}
+	h3 { font-size: 18px; margin-left:30px;}
+	#contactCard {
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+		height:150px;
+	}
+	
+}
+
 </style>
 </head>
 
@@ -583,11 +594,11 @@ strong {
 </div>
 <div id="aboutWrapper" style="width:100%; height:100%;">
 <div id = "aboutid">
-<h1 id="nameHeader" style="position:relative; margin-left:110px;" class=""> <br>Hi, I'm Mazin Zakaria, </h1>
+<h1 id="nameHeader" style="position:relative;" class=""> <br>Hi, I'm Mazin Zakaria, </h1>
 
-<h2 id="aboutHeader" style="margin-left:110px;"> a 20 year old software developer, graphic designer and student of computer science at the University of Kentucky.</h2>
+<h2 id="aboutHeader" > a 20 year old software developer, graphic designer and student of computer science at the University of Kentucky.</h2>
  
- <h3 id="workHeader" style="margin-left:110px;"> Check out my <a target="_blank" href="https://behance.net/mazinzakaria"> <strong>work.</strong></a> </h3>
+ <h3 id="workHeader" > Check out my <a target="_blank" href="https://behance.net/mazinzakaria"> <strong>work.</strong></a> </h3>
 
 <div class="overlay">
 	<div class="wrap">
