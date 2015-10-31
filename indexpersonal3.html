@@ -2,13 +2,15 @@
 <html><head>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta charset="UTF-8">
 <title>Mazin Zakaria</title>
 
 <style>
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,300,200,500,600,700,800);
+
 ::selection {
   background: #e4cd34; 
 }
@@ -125,6 +127,7 @@ body {
 	padding-top:20px;
 
 }
+	
 
 
 #contactid {
@@ -148,6 +151,8 @@ h2 {
 	font-weight:600;
 	font-size:58px;
 	margin-left:110px;
+	padding-right:10px;
+	width:75%;	
 
 }
 
@@ -554,27 +559,33 @@ strong {
 }
 
 @media screen and (max-width:784px) {
-	h1 { font-size: 50px; }
-	h2 { font-size: 34px; }
-	h3 { font-size: 28px; }
+	h1 { font-size: 54px; margin-left: 60px; }
+	h2 { font-size: 38px; margin-left: 60px; }
+	h3 { font-size: 32px; margin-left: 60px; }
 	svg {
 		width:80px;
 		height:120px;
 		top:13px;
 		left:-10px;
 	}
+	#menuIconOverlay{
+		top:9px;
+		left:-9px;
+	}
+	.hicon{stroke-width:20px; }
 	#contactCardCont {
 		width:100%;	
 	}
 	#contactCardCont p {
 		width:100%;	
 	}
+	
 }
 
 @media screen and (max-width:446px) {
-	h1 { font-size: 44px; margin-left:30px; margin-top:0;}
-	h2 { font-size: 28px; margin-left:30px;}
-	h3 { font-size: 24px; margin-left:30px;}
+	h1 { font-size: 44px; margin-left:45px; margin-top:0;}
+	h2 { font-size: 28px; margin-left:45px;}
+	h3 { font-size: 24px; margin-left:45px;}
 	
 	#header{
 		position:absolute;
@@ -588,6 +599,13 @@ strong {
 	}
 	.wrap ul.wrap-nav ul li {
 		font-size:20px;	
+	}
+	#mainid {
+		height:100vh;
+	}
+	#menuIconOverlay{
+		top:-25px;
+		left:-18px;
 	}
 }
 
@@ -655,9 +673,9 @@ strong {
 			
 			<li>
 			<ul>
-				<li id="main" style="margin-bottom:40px;"><a href="#main">H O M E</a></li>
-				<li id="about" style="margin-bottom:40px;"><a href="#about">A B O U T</a></li>
-				<li id="contact"><a href="#contact">C O N T A C T</a></li>
+				<li id="main" style="margin-bottom:40px;"><a href="./index.html">H O M E</a></li>
+				<li id="about" class="wrap-navlist" style="margin-bottom:40px;"><a href="#about">A B O U T</a></li>
+				<li id="contact" class="wrap-navlist"><a href="#contact">C O N T A C T</a></li>
 	
 			</ul>
 			</li>
@@ -763,7 +781,7 @@ $('.overlay').on('click', function(){
     open = false;
 });
 
-$(".wrap-nav li").click(function(e) {
+$(".wrap-navlist").click(function(e) {
 	e.preventDefault();
 		var idName = "#" + $(this).attr('id')  + "id";
 					console.log(idName);
